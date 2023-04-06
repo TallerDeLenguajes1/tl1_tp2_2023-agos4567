@@ -12,14 +12,19 @@ int i=0;
 
 double vt[N];
 
-for (int i = 0; i < N; i++)
+double *pVt;
+pVt=vt;
+
+
+while ( i < N)
 {
-    vt[i]= 1 + rand() % 10001;
-    vt[i] = vt[i] /100;
-    printf("%.2f \n", vt[i]);
+   *pVt= 1 + rand() % 10001;
+   *pVt = *(pVt)/100;
+   printf("%.2f \n", *pVt);
+
+   pVt++;
+   i++;
 }
-
-
 
 
     return 0;
